@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo 2</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<h1>Contador de caracteres </h1>
+    <label for="Titulo"> Caracteres restantes:</label>
+ 
+<div id= "resultado"> </div>
+
+<script>
+function contadorcaracteres() 
+{
+var Total = 150;
+    setTimeout(function(){
+     var valor = document.getElementById('Contador');
+     var respuesta = document.getElementById('resultado');
+     var cantidad = valor.value.length;
+     document.getElementById('resultado').innerHTML = cantidad + ' caracteres sobrantes ' + (Total - cantidad);
+     if (cantidad > Total)
+        {
+         respuesta.style.color = "red";
+        }
+    else 
+        {
+         respuesta.style.color = "Black";
+         }
+     }); 
+    
+    }
+</script>
+<textarea name="Contador" id="Contador" placeholder="Ingrese el Texto" onpaste ="contadorcaracteres();" onkeyup="contadorcaracteres();"></textarea>
+</body>
+</html>  
